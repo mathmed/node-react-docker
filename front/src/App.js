@@ -30,7 +30,7 @@ class App extends Component {
     return (
       <div style = {styles.container}>
         <div style = {styles.center}>
-          <img style = {styles.img} src = {logo}></img>
+          <img alt = "logo" style = {styles.img} src = {logo}></img>
         </div>
         <div style = {styles.center}>
           <label style = {styles.text}>{this.state.data}</label>
