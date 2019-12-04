@@ -1,30 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './compiled/App.css';
 
 class App extends Component {
   constructor() {
     super();
-
-    this.state = {};
+    this.state = {data: ""};
   }
 
   componentDidMount() {
     this.callApi()
-      .then(res => this.setState(res))
-      .catch(console.error);
+      .then(res => this.setState({data: res}))
+        .catch(console.error);
   }
 
   callApi = async () => {
-    const resp = await fetch('/api');
+    
+    const resp = await fetch(`http://${window.location.hostname}:8080/api`);
+
+    alert(`http://${window.location.hostname}:8080/api`)
 
     window._resp = resp;
 
     let text = await resp.text();
 
     let data = null;
+
     try {
-      data = JSON.parse(text); // cannot call both .json and .text - await resp.json();
+      data = JSON.parse(text);
     } catch (e) {
       console.err(`Invalid json\n${e}`);
     }
@@ -39,14 +40,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>{this.state.message || 'No message'}</p>
+        <div>{this.state.data}</div>
       </div>
     );
   }

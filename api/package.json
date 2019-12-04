@@ -1,17 +1,18 @@
 {
-  "name": "ui",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "^1.1.4"
-  },
+  "name": "node-react-docker-compose",
+  "version": "1.0.0",
+  "description": "A reference for running a node server and create-react-app app via docker-compose.",
+  "main": "src/index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "proxy": "http://server:8080"
+  "author": "Peter Coles",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
 }
