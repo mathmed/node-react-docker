@@ -18,7 +18,7 @@ Run at project root
 $ sudo docker-compose up
 ```  
 
-This will create two docker containers, the react frontend and the node API. Edit the `front/` and `api` directories. 
+This will create two docker containers, the react frontend and the node API. Start editing the `front/` and `api/` directories. 
 
 
 ## Accessing
