@@ -1,0 +1,18 @@
+version: '3'
+services:
+    front:
+        container_name: front
+        command: npm install --save && npm start
+        image: bayesimpact/react-base
+        volumes:
+            - "./front/:/home/front"
+        ports:
+            - "8080:8080"  
+    api:
+        container_name: api
+        command: npm install --save && npm start
+        image: node:9.4.0-alpine
+        volumes:
+            - "./api/:/home/app"
+        ports:
+            - "3000:3000"
