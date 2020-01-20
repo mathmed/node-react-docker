@@ -31,5 +31,5 @@ The client server is spun up at `localhost:3000` and the API at `localhost:8080`
 To access a container shell, run
 
 ```html
-$ sudo docker exec -ti <container_name> /bin/sh/
+$ sudo docker exec -ti <container_id> /bin/sh/
 ```
