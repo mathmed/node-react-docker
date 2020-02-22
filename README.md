@@ -1,10 +1,10 @@
 # Dockerize a Node.js/React application
 
-A reference for running a node server and react app via docker-compose.
+A reference for running a NodeJS server and React-APP via Docker (docker-compose-3).
 
 ## Dependencies
 
-To start the project, you need to have `docker-compose` installed, then, so if you don't have it, run  
+To start the project, you need to have `docker` and `docker-compose` installed, then, so if you don't have it, run  
 
 ```
 $ apt install docker-compose
